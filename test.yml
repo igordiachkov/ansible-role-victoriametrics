@@ -1,0 +1,14 @@
+  users:
+    - password: password
+      url_prefix: http://vmselect:8481/select/123/prometheus
+      username: cluster-select-account-123
+    - password: password
+      url_prefix: http://vminsert:8480/insert/42/prometheus
+      username: cluster-insert-account-42
+  
+  
+  unauthorized_user:
+    load_balancing_policy: first_available
+    url_prefix:
+    - http://vminsert:8480/insert/0/prometheus/api/v1/write
+    - http://vminsert:8480/insert/1/prometheus/api/v1/write
