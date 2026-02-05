@@ -147,8 +147,8 @@ provisioner:
             url_prefix: "http://vminsert:8480/insert/42/prometheus"
         victoriametrics_vmauth_unauthorized_user:
           url_prefix:
-            - "http://vminsert1:8480/insert/0/prometheus/api/v1/write"
-            - "http://vminsert2:8480/insert/0/prometheus/api/v1/write"
+            - "http://vminsert:8480/insert/0/prometheus/api/v1/write"
+            - "http://vminsert:8480/insert/1/prometheus/api/v1/write"
           load_balancing_policy: first_available
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-converge.yml}
